@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProjectRequest;
 use App\Models\Project;
+use Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -15,7 +18,8 @@ class ProjectController extends Controller
     public function index()
     {
         return Project::all();
-        
+
+
         // return response()->json($projects);
     }
 
@@ -25,7 +29,7 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProjectRequest $request)
     {
         $project = Project::create($request->all());
         return response()->json([
@@ -41,9 +45,21 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $projects)
+    public function show($id)
     {
-
+        try {
+            $project = Project::findOrFail($id);
+            return response()->json([
+                'status' => true,
+                'projeto' => $project
+            ]);
+        } catch (ModelNotFoundException $e) {
+            return response()->json([
+                'status' => false,
+                'projeto' => 'Projeto não encontrado.',
+                'erro' => '404 Not Found'
+            ], 404);
+        }
     }
 
     /**
@@ -55,8 +71,26 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        // $validated = $request->validate([
+        //     'title' => 'nullable|string|max:255',
+        //     'description' => 'nullable|string',
+        //     'technologies' => 'nullable|string',
+        //     'linkCode' => 'nullable|url',
+        //     'linkDeploy' => 'nullable|url',
+        //     'image' => 'nullable|url',
+        // ]);
+
+
+        // try {
+        //     $project = Project::findOrFail($id);
+        //     $requestData = $request->all();
+
+        //     if()
+        // } catch(Exception $e) {
+
     }
+
 
     /**
      * Remove the specified resource from storage.
