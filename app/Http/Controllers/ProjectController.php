@@ -71,24 +71,24 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
+        try {
+            $project = Project::findOrFail($id);
+            $requestData = $request->all();
 
-        // $validated = $request->validate([
-        //     'title' => 'nullable|string|max:255',
-        //     'description' => 'nullable|string',
-        //     'technologies' => 'nullable|string',
-        //     'linkCode' => 'nullable|url',
-        //     'linkDeploy' => 'nullable|url',
-        //     'image' => 'nullable|url',
-        // ]);
+            $project->update($requestData);
 
+            return response()->json([
+                'status' => true,
+                'message' => "Projeto Atualizado com Sucesso!",
+                'projeto' => $project
+            ]);
+        } catch(ModelNotFoundException $e) {
+            return response()->json([
+                'status' => false,
+                'message' => "Projeto não encontrado !",
 
-        // try {
-        //     $project = Project::findOrFail($id);
-        //     $requestData = $request->all();
-
-        //     if()
-        // } catch(Exception $e) {
-
+            ], 404);
+        }
     }
 
 
