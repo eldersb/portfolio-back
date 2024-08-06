@@ -100,6 +100,19 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $project = Project::findOrFail($id);
+            $project->delete();
+
+            return response()->json([
+                'status' => true,
+                'message' => "Projeto Deletado com Sucesso!"
+            ]);
+        } catch (ModelNotFoundException $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Projeto não encontrado.'
+            ], 404);
+        }
     }
 }
