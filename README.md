@@ -24,10 +24,10 @@ Trata-se de uma api restful que gerencia os projetos do meu portfolio.
     * **Método:** GET <br>
     * **Rota:** <br>
     * **Descrição:** Retorna uma lista de todos os projetos existentes. <br>
-2 - Listar todos os projetos
-    * **Método:** POST
-    * **Rota:**
-    * **Descrição**: Cria um novo projeto. 
+2 - Listar todos os projetos <br>
+    * **Método:** POST <br>
+    * **Rota:** <br>
+    * **Descrição**: Cria um novo projeto. <br>
 
 > [!IMPORTANT]
 >  É necessário enviar os dados do projeto no body(corpo da requisição).
@@ -36,17 +36,17 @@ Trata-se de uma api restful que gerencia os projetos do meu portfolio.
 ![print-postman-adicionar-projeto](https://github.com/user-attachments/assets/2cc4a744-ba6a-46bf-bcc5-f6cc8afa5958)
 
 
-3 - Mostrar um projeto específico pelo ID
-    * **Método:** GET
-    * **Rota:**
-    * **Descrição:** Recupera as informações de um projeto específico cujo id foi passado.
+3 - Mostrar um projeto específico pelo ID <br>
+    * **Método:** GET <br>
+    * **Rota:** <br>
+    * **Descrição:** Recupera as informações de um projeto específico cujo id foi passado. <br>
 
-4 - Atualizar um projeto específico pelo ID
-    * **Método:** ATUALIZAR
-    * **Rota:** 
-    * **Descrição:** Atualiza um projeto específico baseado no id passado. Os dados a serem atualizados também devem ser passados no body(corpo da requisição).
+4 - Atualizar um projeto específico pelo ID <br>
+    * **Método:** ATUALIZAR <br>
+    * **Rota:**  <br>
+    * **Descrição:** Atualiza um projeto específico baseado no id passado. Os dados a serem atualizados também devem ser passados no body(corpo da requisição). <br>
 
-5 - Deletar um projeto específico pelo ID
-    * **Método:** DELETE
-    * **Rota:**
-    * **Descrição:** Deleta um projeto específico baseado no id passado.
+5 - Deletar um projeto específico pelo ID <br>
+    * **Método:** DELETE <br>
+    * **Rota:** <br>
+    * **Descrição:** Deleta um projeto específico baseado no id passado. <br>
