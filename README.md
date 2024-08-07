@@ -20,10 +20,10 @@ Trata-se de uma api restful que gerencia os projetos do meu portfolio.
 }
 ```
 ## Métodos e Rotas
-1 - Listar todos os projetos
-    * **Método:** GET
-    * **Rota:** 
-    * **Descrição:** Retorna uma lista de todos os projetos existentes.
+1 - Listar todos os projetos <br>
+    * **Método:** GET <br>
+    * **Rota:** <br>
+    * **Descrição:** Retorna uma lista de todos os projetos existentes. <br>
 2 - Listar todos os projetos
     * **Método:** POST
     * **Rota:**
