@@ -7,6 +7,9 @@ use App\Models\Project;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
+use Cloudinary\Cloudinary;
+use Cloudinary\Api\Upload\UploadApi;
+
 
 class ProjectController extends Controller
 {
@@ -31,7 +34,18 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        $project = Project::create($request->all());
+
+        $cloudinary = new Cloudinary();
+
+        $uploadedFileUrl = $cloudinary->uploadApi()->upload($request->file('image')->getRealPath());
+
+        $imageUrl = $uploadedFileUrl['secure_url'];
+
+        $requestData = $request->all();
+        $requestData['image'] = $imageUrl;
+
+        $project = Project::create($requestData);
+
         return response()->json([
             'status' => true,
             'message' => "Projeto criado com sucesso!",

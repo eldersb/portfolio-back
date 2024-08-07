@@ -24,12 +24,7 @@ class StoreProjectRequest extends FormRequest
     public function rules()
     {
         return [
-                'title' => 'nullable|string|max:255',
-                'description' => 'nullable|text',
-                'technologies' => 'nullable|text',
-                'linkCode' => 'nullable|url',
-                'linkDeploy' => 'nullable|url',
-                'image' => 'nullable|url',
+                'image' => 'required|image|mimes:jpeg,png, jpg, gif, svg|max:2048',
         ];
     }
 }
