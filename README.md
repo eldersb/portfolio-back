@@ -39,13 +39,15 @@ Trata-se de uma api restful que gerencia os projetos do meu portfolio.
 3 - Mostrar um projeto específico pelo ID <br>
     * **Método:** GET <br>
     * **Rota:** <br>
-    * **Descrição:** Recupera as informações de um projeto específico cujo id foi passado. <br>
-
+    * **Descrição:** Recupera as informações de um projeto específico cujo id foi passado. <br> 
+    
+ 
 4 - Atualizar um projeto específico pelo ID <br>
     * **Método:** ATUALIZAR <br>
     * **Rota:**  <br>
     * **Descrição:** Atualiza um projeto específico baseado no id passado. Os dados a serem atualizados também devem ser passados no body(corpo da requisição). <br>
 
+    
 5 - Deletar um projeto específico pelo ID <br>
     * **Método:** DELETE <br>
     * **Rota:** <br>
