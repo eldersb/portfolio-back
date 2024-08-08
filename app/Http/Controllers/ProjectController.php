@@ -22,7 +22,6 @@ class ProjectController extends Controller
     {
         return Project::all();
 
-
         // return response()->json($projects);
     }
 
