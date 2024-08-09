@@ -26,15 +26,16 @@ Link para o repositório front-end: https://github.com/eldersb/portifolio-front
 
 ```
 1 - Listar todos os projetos <br>
-    * **Método:** `GET` <br>
-    * **Rota:** `/projects` <br>
-    * **Descrição:** Retorna uma lista de todos os projetos existentes. 
+    * Método: `GET` <br>
+    * Rota: `/projects` <br>
+    * Descrição: Retorna uma lista de todos os projetos existentes. 
 ```
-
+```
 2 - Listar todos os projetos <br>
-    * **Método:** `POST` <br>
-    * **Rota:** `/projects`<br>
-    * **Descrição**: Cria um novo projeto. <br>
+    * Método: `POST` <br>
+    * Rota: `/projects`<br>
+    * Descrição: Cria um novo projeto. 
+```
 
 > [!IMPORTANT]
 >  É necessário enviar os dados do projeto no body(corpo da requisição).
@@ -42,20 +43,21 @@ Link para o repositório front-end: https://github.com/eldersb/portifolio-front
 > Exemplo de requisição POST no Postman:
 ![print-postman-adicionar-projeto](https://github.com/user-attachments/assets/2cc4a744-ba6a-46bf-bcc5-f6cc8afa5958)
 
-
+```
 3 - Mostrar um projeto específico pelo ID <br>
-    * **Método:** `GET` <br>
-    * **Rota:** `/projects/id` <br>
-    * **Descrição:** Recupera as informações de um projeto específico cujo id foi passado. <br> 
-    
- 
+    * Método: `GET` <br>
+    * Rota: `/projects/id` <br>
+    * Descrição: Recupera as informações de um projeto específico cujo id foi passado. 
+```  
+```
 4 - Atualizar um projeto específico pelo ID <br>
-    * **Método:** `ATUALIZAR` <br>
-    * **Rota:** `/projects/id` <br>
-    * **Descrição:** Atualiza um projeto específico baseado no id passado. Os dados a serem atualizados também devem ser passados no body(corpo da requisição). <br>
-
-    
+    * Método: `ATUALIZAR` <br>
+    * Rota: `/projects/id` <br>
+    * Descrição: Atualiza um projeto específico baseado no id passado. Os dados a serem atualizados também devem ser passados no body(corpo da requisição).
+```
+```   
 5 - Deletar um projeto específico pelo ID <br>
-    * **Método:** `DELETE` <br>
-    * **Rota:** `/projects/id` <br>
-    * **Descrição:** Deleta um projeto específico baseado no id passado. <br>
+    * Método: `DELETE` <br>
+    * Rota: `/projects/id` <br>
+    * Descrição: Deleta um projeto específico baseado no id passado.
+```
