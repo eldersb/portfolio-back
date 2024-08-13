@@ -2,11 +2,18 @@
 
 ## Descrição do projeto
 Trata-se de uma api restful que gerencia os projetos do meu portfolio.
-Link para o repositório front-end: https://github.com/eldersb/portifolio-front
+Front-end: https://github.com/eldersb/portfolio-front
+Deploy: https://portfolio-elder.vercel.app
+API: https://portifolio-back-tfji.vercel.app/api/api/projects
+
+> [!NOTE]  
+> Teve um bug no deploy que ficou /api/api.
 
 ## Tecnologias Utilizadas 
 * Laravel
 * MySQL
+* Banco Remoto: Freehostia
+* Cloudinary (armazenamento de imagens)
 
 ## Endpoints
 * Modelo JSON:
