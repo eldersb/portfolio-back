@@ -5,7 +5,7 @@ Trata-se de uma api restful que gerencia os projetos do meu portfolio.
 
 * Front-end: https://github.com/eldersb/portfolio-front
 * Deploy: https://portfolio-elder.vercel.app
-* API: https://portifolio-back-tfji.vercel.app/api/api/projects
+* API: https://portfolio-elder-back.vercel.app/api/api/projects
 
 > [!NOTE]  
 > Teve um bug no deploy que ficou /api/api.
